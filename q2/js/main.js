@@ -40,14 +40,26 @@ $("#slideLeftBtn").click(function () {
   }
 });
 
+$("a.link-item").addClass("border-bottom border-white border-2");
+$("a.link-item").attr("tabindex", -1);
+
+$("a.link-item").hover(
+  function () {
+	$(this).removeClass("border-white");
+    $(this).addClass("border-black");
+  },
+  function () {
+	$(this).removeClass("border-black");
+	$(this).addClass("border-white");
+  }
+);
+
 $(".dropdown").mouseenter(function () {
-  $(this).find("a.link-item").addClass("border-bottom border-black border-2");
-  $(this).find(".dropdown-toggle").dropdown("show");
+  $(this).find(".dropdown-toggl").dropdown("show");
 });
 
 $(".dropdown").mouseleave(function () {
-  $(this)
-    .find("a.link-item")
-    .removeClass("border-bottom border-black border-2");
-  $(this).find(".dropdown-toggle").dropdown("hide");
+  setTimeout(() => {
+    $(this).find(".dropdown-toggl").dropdown("hide");
+  },500);
 });
