@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Apply for Job Form</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container-sm">
+      <h1 class="mt-5">Apply for Job!</h1>
+      <form class="row g-3 needs-validation" novalidate>
+        <legend>Personal Info</legend>
+        <div class="col-6 form-floating">
+          <input
+            type="text"
+            class="form-control alphabets"
+            id="validation01"
+            placeholder="First Name"
+            required
+          />
+          <label for="validation01" class="ms-2">First name</label>
+        </div>
+        <div class="col-6 form-floating">
+          <input
+            type="text"
+            class="form-control alphabets"
+            id="validation02"
+            placeholder="Last Name"
+            required
+          />
+          <label for="validation02" class="ms-2">Last name</label>
+        </div>
+        <div class="col-6 form-floating">
+          <input
+            type="text"
+            class="form-control phoneNo"
+            id="validation03"
+            placeholder="Phone Number"
+            required
+          />
+          <label for="validation03" class="ms-2">Phone Number</label>
+        </div>
+        <div class="col-6 form-floating">
+          <input
+            type="email"
+            class="form-control email"
+            id="validation04"
+            placeholder="Email"
+            required
+          />
+          <label for="validation04" class="ms-2">Email</label>
+        </div>
+        <div class="col-12">
+          <h5 class="form-label ms-1">Address</h5>
+        </div>
+        <div class="col-md-3 col-6 form-floating">
+          <input
+            type="text"
+            class="form-control required"
+            id="validation05"
+            placeholder="Street"
+            required
+          />
+          <label for="validation05" class="form-label ms-2">Street</label>
+        </div>
+        <div class="col-md-3 col-6 form-floating">
+          <input
+            type="text"
+            class="form-control required"
+            id="validation06"
+            placeholder="City"
+            required
+          />
+          <label for="validation06" class="form-label ms-2">City</label>
+        </div>
+        <div class="col-md-3 col-6 form-floating">
+          <select class="form-select select" id="validation07" required>
+            <option selected disabled value="">Choose...</option>
+            <option value="Punjab">Punjab</option>
+            <option value="Sindh">Sindh</option>
+            <option value="KPK">KPK</option>
+            <option value="Azad Kashmir">Azad Kashmir</option>
+            <option value="Gilgit Baltistan">Gilgit Baltistan</option>
+            <option value="Balochistan">Balochistan</option>
+            <option value="FATA">FATA</option>
+          </select>
+          <label for="validation07" class="form-label ms-2">Province</label>
+          <div class="invalid-feedback">Please select a valid state.</div>
+        </div>
+        <div class="col-md-3 col-6 form-floating">
+          <input
+            type="text"
+            class="form-control no"
+            id="validation08"
+            placeholder="Zip"
+            required
+          />
+          <label for="validation08" class="form-label ms-2">Zip</label>
+        </div>
+
+        <legend>Resume and Cover Letter</legend>
+        <div class="col-12">
+          <label for="validation09" class="form-label ms-1">Resume</label>
+          <input
+            type="file"
+            class="form-control file"
+            id="validation09"
+            required
+          />
+        </div>
+        <div class="col-12">
+          <div class="input-group">
+            <span class="input-group-text">Cover Letter</span>
+            <textarea
+              class="form-control notRequired"
+              rows="10"
+              id="validation10"
+            ></textarea>
+          </div>
+        </div>
+
+        <legend>Education</legend>
+        <div class="col-md-6 col-12 form-floating">
+          <input
+            type="text"
+            class="form-control alphabets"
+            id="validation11"
+            placeholder="Highest Level of Education Attained"
+            required
+          />
+          <label for="validation11" class="form-label ms-2"
+            >Highest Level of Education Attained</label
+          >
+        </div>
+        <div class="col-md-6 col-12 form-floating">
+          <input
+            type="text"
+            class="form-control required"
+            id="validation12"
+            placeholder="Name of School / University"
+            required
+          />
+          <label for="validation12" class="form-label ms-2"
+            >Name of School / University</label
+          >
+        </div>
+        <div class="col-md-6 col-12 form-floating">
+          <input
+            type="text"
+            class="form-control required"
+            id="validation13"
+            placeholder="Major Area of Study"
+            required
+          />
+          <label for="validation13" class="form-label ms-2"
+            >Major Area of Study</label
+          >
+        </div>
+        <div class="col-md-6 col-12 form-floating">
+          <input
+            type="number"
+            class="form-control year"
+            id="validation14"
+            placeholder="Year of Graduation"
+            min="1924"
+            max="2054"
+            required
+          />
+          <label for="validation14" class="form-label ms-2"
+            >Year of Graduation</label
+          >
+        </div>
+
+        <legend>Employment History</legend>
+        <div class="col-12 container" id="jobs"></div>
+        <div class="col-12 text-center">
+          <button class="btn btn-primary" type="button" id="addJob">
+            Add Job
+          </button>
+          <button class="btn btn-danger" type="button" id="removeJob">
+            Remove Job
+          </button>
+        </div>
+
+        <legend>Skills</legend>
+        <div class="skills col-md-6 col-sm-12">
+          <ul id="skillsList"></ul>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <div class="input-group">
+            <input
+              type="text"
+              class="form-control"
+              id="skill-input"
+              placeholder="Skill"
+              required
+            />
+            <button class="btn btn-primary" type="button" id="addSkill">
+              Add Skill
+            </button>
+            <div class="invalid-feedback">Please Enter a Valid Skill</div>
+          </div>
+        </div>
+
+        <legend>Certifications</legend>
+        <div class="col-12 container" id="certificates"></div>
+        <div class="col-12 text-center">
+          <button class="btn btn-primary" type="button" id="addCertificate">
+            Add Certificate
+          </button>
+          <button class="btn btn-danger" type="button" id="removeCertificate">
+            Remove Certificate
+          </button>
+        </div>
+
+        <legend>Availability</legend>
+        <div
+          class="col-xl-5 col-lg-6 col-md-8 col-sm-12 d-flex justify-content-start align-items-center"
+        >
+          <p for="relocation">Are you willing to relocate for your job?</p>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input ms-2 radio"
+              type="radio"
+              name="relocation"
+              id="can-relocate"
+              required
+            />
+            <label class="form-check-label ms-2" for="can-relocate">Yes</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input ms-1 radio"
+              type="radio"
+              name="relocation"
+              id="cannot-relocate"
+              required
+            />
+            <label class="form-check-label ms-1" for="cannot-relocate"
+              >No</label
+            >
+          </div>
+        </div>
+        <div class="col-xl-7 col-lg-6 col-md-4 col-sm-12 form-floating">
+          <input
+            type="date"
+            class="form-control validation21 date"
+            id="jobstartdate"
+            required
+          /><label for="jobstartdate" class="form-label ms-2"
+            >Available After</label
+          >
+        </div>
+        <div class="col-12">
+          <p class="m-0 p-0 ms-1">Preferred Schedule</p>
+        </div>
+        <div class="col-6 form-floating">
+          <input
+            type="time"
+            class="form-control validation22 time"
+            id="jobstarttime"
+            required
+          /><label for="jobstarttime" class="form-label ms-2">Start Time</label>
+        </div>
+        <div class="col-6 form-floating">
+          <input
+            type="time"
+            class="form-control validation23 time"
+            id="jobendtime"
+            required
+          /><label for="jobendtime" class="form-label ms-2">End Time</label>
+        </div>
+
+        <legend>Reference</legend>
+        <div class="col-xl-4 col-lg-4 form-floating">
+          <input
+            type="text"
+            class="form-control alphabets notRequired"
+            id="validation24"
+            placeholder="Reference Name"
+          />
+          <label for="validation24" class="ms-2">Reference Name</label>
+        </div>
+        <div class="col-xl-4 col-lg-4 form-floating">
+          <input
+            type="text"
+            class="form-control phoneNo notRequired"
+            id="validation25"
+            placeholder="Reference Phone Number"
+          />
+          <label for="validation25" class="ms-2">Reference Phone Number</label>
+        </div>
+        <div class="col-xl-4 col-lg-4 form-floating">
+          <input
+            type="email"
+            class="form-control email notRequired"
+            id="validation26"
+            placeholder="Reference Email"
+          />
+          <label for="validation26" class="ms-2">Reference Email</label>
+        </div>
+
+        <legend>Additional Questions</legend>
+        <div class="col-12 form-floating">
+          <textarea
+            class="form-control required"
+            rows="5"
+            id="validation27"
+            placeholder="Why do you want to work for us?"
+            required
+          ></textarea>
+          <label for="validation27" class="form-label ms-1"
+            >Why do you want to work for us?</label
+          >
+        </div>
+        <div class="col-lg-6">
+          <div class="form-check">
+            <input
+              class="form-check-input checkBox"
+              type="checkbox"
+              value=""
+              id="validation28"
+              required
+            />
+            <label class="form-check-label" for="validation28">
+              Agree to terms and conditions
+            </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input checkBox"
+              type="checkbox"
+              value=""
+              id="validation29"
+              required
+            />
+            <label class="form-check-label" for="validation29">
+              Agree to Privacy Policy
+            </label>
+          </div>
+        </div>
+        <div
+          class="col-lg-6 d-flex justify-content-lg-end justify-content-center"
+        >
+          <button class="btn btn-primary" type="submit" id="submit-btn">
+            Submit form
+          </button>
+        </div>
+        <div class="col-12" style="height: 200px"></div>
+      </form>
+    </div>
+
+    <script src="js/jquery-3.7.1.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>View Data</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main class="container-md my-5">
+      <div class="row">
+        <div class="col-12 d-flex justify-content-center align-items-center">
+          <img
+            src="img/icons8-done.gif"
+            alt="Data Recorded Successfully Icon"
+            id="done-icon"
+            height="100"
+            width="100"
+          />
+        </div>
+        <div class="col-12">
+          <h1 class="text-center">Data Recorded Successfully</h1>
+          <p class="text-center">
+            Your data has been recorded successfully. You can view your data by
+            clicking the button below.
+          </p>
+          <div class="d-flex justify-content-center">
+            <button id="show-data-btn" class="btn btn-primary">
+              View Data
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="row container mt-3 d-none" id="table">
+        <div class="row">
+          <div class="col-12">
+            <h3 class="m-0 p-0 mb-2">Personal Info</h3>
+          </div>
+        </div>
+        <div class="row" id="name-row">
+          <div
+            class="col-2 border-top border-bottom border-start border-1 border-black text-center"
+          >
+            <h6>ID</h6>
+          </div>
+          <div
+            class="col-5 border-top border-bottom border-start border-1 border-black text-center"
+          >
+            <h6>First Name</h6>
+          </div>
+          <div
+            class="col-5 border-top border-bottom border-end border-start border-1 border-black text-center"
+          >
+            <h6>Last Name</h6>
+          </div>
+        </div>
+        <div class="row mt-5" id="contact-row">
+          <div
+            class="col-2 border-top border-bottom border-start border-1 border-black text-center"
+          >
+            <h6>ID</h6>
+          </div>
+          <div
+            class="col-5 border-top border-bottom border-start border-1 border-black text-center"
+          >
+            <h6>Phone Number</h6>
+          </div>
+          <div
+            class="col-5 border-top border-bottom border-end border-start border-1 border-black text-center"
+          >
+            <h6>Email</h6>
+          </div>
+        </div>
+        <div class="row mt-5" id="address-row">
+          <div
+            class="col-1 border-top border-bottom border-start border-1 border-black text-center"
+          >
+            <h6>ID</h6>
+          </div>
+          <div
+            class="col-8 border-top border-bottom border-start border-1 border-black text-center"
+          >
+            <h6>Address</h6>
+          </div>
+          <div
+            class="col-3 border-top border-bottom border-end border-start border-1 border-black text-center"
+          >
+            <h6>Resume</h6>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-12">
+            <h3 class="m-0 p-0 mb-2">Education</h3>
+          </div>
+        </div>
+        <div class="row" id="education-row">
+          <div
+            class="col-1 border-top border-bottom border-start border-1 border-black text-center"
+          >
+            <h6>ID</h6>
+          </div>
+          <div
+            class="col-3 border-top border-bottom border-start border-1 border-black text-center"
+          >
+            <h6>Degree</h6>
+          </div>
+          <div
+            class="col-3 border-top border-bottom border-start border-1 border-black text-center"
+          >
+            <h6>Institute</h6>
+          </div>
+          <div
+            class="col-3 border-top border-bottom border-start border-1 border-black text-center"
+          >
+            <h6>Field</h6>
+          </div>
+          <div
+            class="col-2 border-top border-bottom border-end border-start border-1 border-black text-center"
+          >
+            <h6>Grad. Year</h6>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-12">
+            <h3 class="m-0 p-0 mb-2">Job History</h3>
+          </div>
+        </div>
+        <div class="row" id="jobs-row">
+          <div
+            class="col-1 border-top border-bottom border-start border-1 border-black text-center"
+          >
+            <h6>ID</h6>
+          </div>
+          <div
+            class="col-3 border-top border-bottom border-start border-1 border-black text-center"
+          >
+            <h6>Title</h6>
+          </div>
+          <div
+            class="col-4 border-top border-bottom border-start border-1 border-black text-center"
+          >
+            <h6>Company</h6>
+          </div>
+          <div
+            class="col-2 border-top border-bottom border-start border-1 border-black text-center"
+          >
+            <h6>From</h6>
+          </div>
+          <div
+            class="col-2 border-top border-bottom border-end border-start border-1 border-black text-center"
+          >
+            <h6>Till</h6>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-12">
+            <h3 class="m-0 p-0 mb-2">Skills</h3>
+          </div>
+        </div>
+        <div class="row" id="skills-row">
+          <div
+            class="col-1 border-top border-bottom border-start border-1 border-black text-center"
+          >
+            <h6>ID</h6>
+          </div>
+          <div class="col-11 border border-1 border-black text-center">
+            <h6>Skills</h6>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-12">
+            <h3 class="m-0 p-0 mb-2">Certificates</h3>
+          </div>
+        </div>
+        <div class="row" id="certificates-row">
+          <div
+            class="col-2 border-top border-bottom border-start border-1 border-black text-center"
+          >
+            <h6>ID</h6>
+          </div>
+          <div
+            class="col-5 border-top border-bottom border-start border-1 border-black text-center"
+          >
+            <h6>Name</h6>
+          </div>
+          <div
+            class="col-5 border-top border-bottom border-end border-start border-1 border-black text-center"
+          >
+            <h6>Awarded By</h6>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-12">
+            <h3 class="m-0 p-0 mb-2">Availability</h3>
+          </div>
+        </div>
+        <div class="row" id="availability-row">
+          <div
+            class="col-1 border-top border-bottom border-start border-1 border-black text-center"
+          >
+            <h6>ID</h6>
+          </div>
+          <div
+            class="col-3 border-top border-bottom border-start border-1 border-black text-center"
+          >
+            <h6>Can Relocate?</h6>
+          </div>
+          <div
+            class="col-4 border-top border-bottom border-start border-1 border-black text-center"
+          >
+            <h6>Avalaible After</h6>
+          </div>
+          <div
+            class="col-2 border-top border-bottom border-start border-1 border-black text-center"
+          >
+            <h6>From</h6>
+          </div>
+          <div
+            class="col-2 border-top border-bottom border-end border-start border-1 border-black text-center"
+          >
+            <h6>Till</h6>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-12">
+            <h3 class="m-0 p-0 mb-2">Reference</h3>
+          </div>
+        </div>
+        <div class="row" id="reference-row">
+          <div
+            class="col-1 border-top border-bottom border-start border-1 border-black text-center"
+          >
+            <h6>ID</h6>
+          </div>
+          <div
+            class="col-3 border-top border-bottom border-start border-1 border-black text-center"
+          >
+            <h6>Name</h6>
+          </div>
+          <div
+            class="col-4 border-top border-bottom border-start border-1 border-black text-center"
+          >
+            <h6>Phone Number</h6>
+          </div>
+          <div
+            class="col-4 border-top border-bottom border-end border-start border-1 border-black text-center"
+          >
+            <h6>Email</h6>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-12">
+            <h3 class="m-0 p-0 mb-2">Additional Questions</h3>
+          </div>
+        </div>
+        <div class="row" id="question-row">
+          <div
+            class="col-1 border-top border-bottom border-start border-1 border-black text-center"
+          >
+            <h6>ID</h6>
+          </div>
+          <div class="col-11 border border-1 border-black text-center">
+            <h6>Why do you want to work for us?</h6>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="js/jquery-3.7.1.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

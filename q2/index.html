@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PersonsForHiring</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="img/logo.png" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <nav class="topbar">
+        <div class="top-logo">
+          <img src="img/logo-color.png" alt="Persons For Hiring Logo" />
+          <a>persons<span class="top-logo-for">for</span>hiring</a>
+        </div>
+        <div class="top-links">
+          <div class="search-links">
+            <img
+              id="search"
+              src="img/search.png"
+              alt="Search Icon"
+              width="50"
+              height="50"
+            />
+            <p class="text-center mt-3 search-text">Search</p>
+            <button class="btn" data-bs-toggle="dropdown" aria-expanded="false">
+              <img
+                src="img/expand.png"
+                alt="Expand Menu Logo"
+                id="expand"
+                width="50"
+                height="50"
+              />
+            </button>
+            <div class="dropdown-menu w-25">
+              <div class="container-sm ms-4">
+                <div
+                  class="row d-flex flex-col border-bottom border-dark-subtle border-opacity-50 w-75 p-3 gap-2"
+                >
+                  <p class="m-0 p-0">Search <span class="bold">offers</span></p>
+                  <p class="sub m-0 p-0">to buy now</p>
+                </div>
+                <div
+                  class="row d-flex flex-col border-bottom border-dark-subtle border-opacity-50 w-75 p-3 gap-2"
+                >
+                  <p class="m-0 p-0">
+                    Search <span class="bold">freelancers</span>
+                  </p>
+                  <p class="sub m-0 p-0">to request a porposal</p>
+                </div>
+                <div class="row d-flex flex-col w-75 p-3 gap-2">
+                  <p class="m-0 p-0">
+                    Search <span class="bold">projects</span>
+                  </p>
+                  <p class="sub m-0 p-0">to qoute on</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="top-link">How it Works</a>
+          <div class="top-hor-divider"></div>
+          <a href="#" class="top-link">Log In</a>
+          <a href="#" class="top-link">Sign Up</a>
+          <a href="#" class="top-link" style="color: var(--primary)"
+            >Freelancer?</a
+          >
+          <button
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasExample"
+            id="topbar-side-menu-btn"
+            class="btn"
+          >
+            <img
+              id="menu"
+              src="img/menu.png"
+              alt="Side Menu Icon"
+              width="50"
+              height="50"
+            />
+          </button>
+        </div>
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasExample"
+          aria-labelledby="offcanvasExampleLabel"
+        >
+          <!-- <div class="offcanvas-header"> -->
+          <div class="header">
+            <!-- <h5 class="offcanvas-title" id="offcanvasExampleLabel">
+              Offcanvas
+            </h5> -->
+            <div class="container-fluid"></div>
+            <button
+              type="button"
+              class="btn-close m-3"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body d-flex flex-column align-items-center">
+            <div class="accordion w-100" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne"
+                    aria-expanded="false"
+                    aria-controls="collapseOne"
+                  >
+                    <div
+                      class="d-flex text-center flex-row justify-content-center align-items-center gap-3"
+                    >
+                      <img
+                        id="search2"
+                        src="img/search.png"
+                        alt="Search Icon"
+                        width="30"
+                        height="30"
+                      />
+                      <p class="text-center mt-3 search-text">Search</p>
+                    </div>
+                  </button>
+                </h2>
+                <div
+                  id="collapseOne"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    <div class="container ms-4">
+                      <div
+                        class="row d-flex flex-col border-bottom border-dark-subtle border-opacity-50 w-75 p-3 gap-2"
+                      >
+                        <p class="m-0 p-0">
+                          Search <span class="bold">offers</span>
+                        </p>
+                        <p class="sub m-0 p-0">to buy now</p>
+                      </div>
+                      <div
+                        class="row d-flex flex-col border-bottom border-dark-subtle border-opacity-50 w-75 p-3 gap-2"
+                      >
+                        <p class="m-0 p-0">
+                          Search <span class="bold">freelancers</span>
+                        </p>
+                        <p class="sub m-0 p-0">to request a porposal</p>
+                      </div>
+                      <div class="row d-flex flex-col w-75 p-3 gap-2">
+                        <p class="m-0 p-0">
+                          Search <span class="bold">projects</span>
+                        </p>
+                        <p class="sub m-0 p-0">to qoute on</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="border-bottom border-secondary-subtle border-opacity-25 border-opacity-10 mt-3 w-75"
+            ></div>
+            <div class="container w-75">
+              <div
+                class="row border-bottom border-secondary-subtle border-opacity-25 p-3"
+              >
+                <a href="#" class="offcanvas-link">How it Works</a>
+              </div>
+              <div
+                class="row border-bottom border-secondary-subtle border-opacity-25 p-3"
+              >
+                <a href="#" class="offcanvas-link">Log In</a>
+              </div>
+              <div
+                class="row border-bottom border-secondary-subtle border-opacity-25 p-3"
+              >
+                <a href="#" class="offcanvas-link">Sign Up</a>
+              </div>
+              <div class="row p-3">
+                <a href="#" class="offcanvas-link" style="color: var(--primary)"
+                  >Freelancer?</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main></main>
+    <footer>
+      <div class="footer">
+        <div class="logo">
+          <img src="img/logo.png" alt="Persons For Hiring Logo" />
+          <p>persons<span class="logo-for">for</span>hiring</p>
+        </div>
+        <div class="links">
+          <div class="links-section">
+            <p href="#" class="links-heading">Product</p>
+            <a href="#" class="links-item">About</a>
+            <a href="#" class="links-item">Team</a>
+            <a href="#" class="links-item">Careers</a>
+          </div>
+          <div class="links-section">
+            <p href="#" class="links-heading">Support</p>
+            <a href="#" class="links-item">How it works</a>
+            <a href="#" class="links-item">Trust &amp; Safety</a>
+            <a href="#" class="links-item">Help Center</a>
+          </div>
+          <div class="links-section">
+            <p href="#" class="links-heading">Discover</p>
+            <a href="#" class="links-item">Guides</a>
+            <a href="#" class="links-item">Stories</a>
+            <a href="#" class="links-item">News</a>
+          </div>
+          <div class="links-section">
+            <p href="#" class="links-heading">Resources</p>
+            <a href="#" class="links-item">TalentDesk</a>
+            <a href="#" class="links-item">Business Cost Calculator</a>
+            <a href="#" class="links-item">Startup Cities</a>
+          </div>
+          <div class="links-section">
+            <p href="#" class="links-heading">Browse</p>
+            <a href="#" class="links-item">Freelance Services</a>
+            <a href="#" class="links-item">Freelance Services By Country</a>
+            <a href="#" class="links-item">Freelance Skills</a>
+          </div>
+        </div>
+        <div class="socials">
+          <img
+            id="facebook"
+            class="socials-icon"
+            src="img/facebook.svg"
+            alt="Facebook Logo"
+          />
+          <img
+            id="x"
+            class="socials-icon"
+            src="img/x.svg"
+            alt="Twitter X Logo"
+          />
+          <img
+            id="linkedin"
+            class="socials-icon"
+            src="img/linkedin.svg"
+            alt="LinkedIn Logo"
+          />
+          <img
+            id="instagram"
+            class="socials-icon"
+            src="img/instagram.svg"
+            alt="Instagram Logo"
+          />
+        </div>
+        <div class="divider"></div>
+        <div class="details">
+          <a href="#" class="details-link">Terms</a>
+          <a href="#" class="details-link">Privacy</a>
+          <a href="#" class="details-link">Sitemap</a>
+          <a href="#" class="details-link">Comapny Details</a>
+          <a href="#" class="details-link"
+            >&copy; 2024 Persons For Hiring Ltd</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <!--Js file-->
+    <script src="js/jquery-3.7.1.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
