@@ -2,7 +2,7 @@
 	--footer-bg-color: rgb(24, 32, 43);
 	--footer-secondary: rgb(171, 178, 196);
 	--footer-primary: rgb(233, 236, 242);
-	--bg-color: rgba(245, 247, 250, 0.98);
+	--bg-color: rgba(245, 247, 250, 0.685);
 	--font-color: rgb(50, 53, 59);
 	--font-color-sec: rgba(71, 73, 79, 0.9);
 	--primary: rgb(232, 87, 16);
@@ -11,6 +11,7 @@
 
 body {
 	font-family: "Open Sans", sans-serif;
+	background-color: var(--bg-color);
 	padding: 0;
 	margin: 0;
 }
@@ -235,6 +236,10 @@ footer {
 #menu {
 	display: none;
 	cursor: pointer;
+}
+
+.link-item {
+	display: inline-block;
 }
 
 @media screen and (max-width: 1024px) {
